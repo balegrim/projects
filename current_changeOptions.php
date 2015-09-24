@@ -1,15 +1,4 @@
-  Your Session Has Been Updated.
 <html>
-
-<head>
-
-<title>ChangeOptions</title>
-</head>
-
-<body>
-
-<p>A05_SessionColors/changeOptions.php</p>
-<center>
 <?Php
 
 $Name = ($_POST["txtName"]);
@@ -26,9 +15,7 @@ $URLLink1 = ($_POST["txtLink1"]);
 $URLLink2 = ($_POST["txtLink2"]);
 $URLLink3 = ($_POST["txtLink3"]);
 
-//session_name('Colors');
 session_start();
-//$private_id = session_id();
 $_SESSION['Name'] = $Name;
 $_SESSION['PictureURL'] = $PictureURL;
 $_SESSION['TextColor'] = $TextColor;
@@ -43,30 +30,36 @@ $_SESSION['URLLink1'] = $URLLink1;
 $_SESSION['URLLink2'] = $URLLink2;
 $_SESSION['URLLink3'] = $URLLink3;
 
-//session_write_close();
+session_write_close();
 
-setcookie("Name", $Name,mktime().time() + 600);
-setcookie("PictureURL", $PictureURL,mktime().time() + 600);
-setcookie("TextColor", $TextColor,mktime().time() + 600);
-setcookie("BackgroundColor", $BackgroundColor,mktime().time() + 600);
-setcookie("HyperlinkColor", $HyperlinkColor,mktime().time() + 600);
-setcookie("VHyperlinkColor", $VHyperlinkColor,mktime().time() + 600);
-setcookie("AHyperlinkColor", $AHyperlinkColor,mktime().time() + 600);
-setcookie("URLName1", $URLName1,mktime().time() + 600);
-setcookie("URLName2", $URLName2,mktime().time() + 600);
-setcookie("URLName3", $URLName3,mktime().time() + 600);
-setcookie("URLLink1", $URLLink1,mktime().time() + 600);
-setcookie("URLLink2", $URLLink2,mktime().time() + 600);
-setcookie("URLLink3", $URLLink3,mktime().time() + 600);
+setcookie("Name", $Name,time() + 6000);
+setcookie("PictureURL", $PictureURL,time() + 6000);
+setcookie("TextColor", $TextColor,time() + 6000);
+setcookie("BackgroundColor", $BackgroundColor,time() + 6000);
+setcookie("HyperlinkColor", $HyperlinkColor,time() + 6000);
+setcookie("VHyperlinkColor", $VHyperlinkColor,time() + 6000);
+setcookie("AHyperlinkColor", $AHyperlinkColor,time() + 6000);
+setcookie("URLName1", $URLName1,time() + 6000);
+setcookie("URLName2", $URLName2,time() + 6000);
+setcookie("URLName3", $URLName3,time() + 6000);
+setcookie("URLLink1", $URLLink1,time() + 6000);
+setcookie("URLLink2", $URLLink2,time() + 6000);
+setcookie("URLLink3", $URLLink3,time() + 6000);
 
 ?>
+<head>
 
+<title>ChangeOptions</title>
+</head>
+
+<body>
+
+<p>A05_SessionColors/changeOptions.php</p>
+<center>
 
 <p><a href="default.php">Return to Main Page</a></p>
 
-
 <p>&nbsp;</p>
-
 
 </center>
 </body>
