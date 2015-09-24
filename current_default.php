@@ -15,12 +15,37 @@ $URLLink1;
 $URLLink2;
 $URLLink3;
 
+
 session_start();
 if ($_SESSION['Name'] != null){
-	
+	$Name = $_SESSION['Name'];
+	$PictureURL = $_SESSION['PictureURL'];
+	$TextColor = $_SESSION['TextColor'];
+	$BackgroundColor = $_SESSION['BackgroundColor'];
+	$HyperlinkColor = $_SESSION['HyperlinkColor'];
+	$VHyperlinkColor = $_SESSION['VHyperlinkColor'];
+	$AHyperlinkColor = $_SESSION['AHyperlinkColor'];
+	$URLName1 = $_SESSION['URLName1'];
+	$URLName2 = $_SESSION['URLName2'];
+	$URLName3 = $_SESSION['URLName3'];
+	$URLLink1 = $_SESSION['URLLink1'];
+	$URLLink2 = $_SESSION['URLLink2'];
+	$URLLink3 = $_SESSION['URLLink3'];
 }
-else if ($_COOKIE['cookie'] != null){
-	
+else if (isset($_COOKIE["Name"])){
+	$Name = $_COOKIE["Name"];
+	$PictureURL = $_COOKIE["PictureURL"];
+	$TextColor = $_COOKIE["TextColor"];
+	$BackgroundColor = $_COOKIE["BackgroundColor"];
+	$HyperlinkColor = $_COOKIE["HyperlinkColor"];
+	$VHyperlinkColor = $_COOKIE["VHyperlinkColor"];
+	$AHyperlinkColor = $_COOKIE["AHyperlinkColor"];
+	$URLName1 = $_COOKIE["URLName1"];
+	$URLName2 = $_COOKIE["URLName2"];
+	$URLName3 = $_COOKIE["URLName3"];
+	$URLLink1 = $_COOKIE["URLLink1"];
+	$URLLink2 = $_COOKIE["URLLink2"];
+	$URLLink3 = $_COOKIE["URLLink3"];
 }
 else{
 	$Name = "Bill";
@@ -37,8 +62,8 @@ else{
 	$URLLink2 = "http://www.usdoj.gov/atr/cases/ms_index.htm";
 	$URLLink3 = "http://www.microsoft.com";
 }
-
 ?>
+
 <head>
 <title>A05_SessionColors</title>
 </head>
@@ -53,7 +78,7 @@ else{
 
 <center>
 <h1><?Php echo $Name; ?>'s Home Page</h1>
-<p><img border="0" src="<?Php echo $PictureURL; ?>"></p>
+<p><img border="0" src=<?Php echo $PictureURL; ?>></p>
 <h2>My Three Favorite Links</h2>
 <ul>
   <li>
